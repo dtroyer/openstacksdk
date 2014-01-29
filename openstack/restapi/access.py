@@ -17,8 +17,8 @@
 
 import datetime
 
-from keystoneclient.openstack.common import timeutils
-from keystoneclient import service_catalog
+from openstack.openstack.common import timeutils
+from openstack.restapi import service_catalog
 
 
 # gap, in seconds, to determine whether the given token is about to expire

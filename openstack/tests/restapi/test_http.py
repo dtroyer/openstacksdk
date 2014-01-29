@@ -18,10 +18,10 @@ import httpretty
 import six
 from testtools import matchers
 
-from keystoneclient import exceptions
-from keystoneclient import httpclient
-from keystoneclient import session
-from keystoneclient.tests import utils
+from openstack.restapi import exceptions
+from openstack.restapi import httpclient
+from openstack.restapi import session
+from openstack.tests import utils
 
 
 RESPONSE_BODY = '{"hi": "there"}'
@@ -136,19 +136,6 @@ class ClientTest(utils.TestCase):
         cl.request(self.TEST_URL, 'GET')
         forwarded = "for=%s;by=%s" % (ORIGINAL_IP, httpclient.USER_AGENT)
         self.assertRequestHeaderEqual('Forwarded', forwarded)
-
-    def test_client_deprecated(self):
-        # Can resolve symbols from the keystoneclient.client module.
-        # keystoneclient.client was deprecated and renamed to
-        # keystoneclient.httpclient. This tests that keystoneclient.client
-        # can still be used.
-
-        from keystoneclient import client
-
-        # These statements will raise an AttributeError if the symbol isn't
-        # defined in the module.
-
-        client.HTTPClient
 
 
 class BasicRequestTests(utils.TestCase):

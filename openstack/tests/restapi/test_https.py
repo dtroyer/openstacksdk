@@ -15,9 +15,9 @@
 import mock
 import requests
 
-from keystoneclient import httpclient
-from keystoneclient import session
-from keystoneclient.tests import utils
+from openstack.restapi import httpclient
+from openstack.restapi import session
+from openstack.tests import utils
 
 
 FAKE_RESPONSE = utils.TestResponse({

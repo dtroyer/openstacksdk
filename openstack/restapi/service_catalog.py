@@ -20,7 +20,7 @@ import abc
 
 import six
 
-from keystoneclient import exceptions
+from openstack.restapi import exceptions
 
 
 @six.add_metaclass(abc.ABCMeta)

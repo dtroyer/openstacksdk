@@ -20,7 +20,6 @@ OpenStack Client interface. Handles the REST calls and responses.
 """
 
 import logging
-from six.moves.urllib import parse as urlparse
 
 from six.moves.urllib import parse as urlparse
 
@@ -31,18 +30,13 @@ except ImportError:
     keyring = None
     pickle = None
 
-# Python 2.5 compat fix
-if not hasattr(urlparse, 'parse_qsl'):
-    import cgi
-    urlparse.parse_qsl = cgi.parse_qsl
 
-
-from keystoneclient import access
-from keystoneclient.auth import base
-from keystoneclient import baseclient
-from keystoneclient import exceptions
-from keystoneclient.openstack.common import jsonutils
-from keystoneclient import session as client_session
+from openstack.openstack.common import jsonutils
+from openstack.restapi import access
+from openstack.restapi.auth import base
+from openstack.restapi import baseclient
+from openstack.restapi import exceptions
+from openstack.restapi import session as client_session
 
 
 _logger = logging.getLogger(__name__)
