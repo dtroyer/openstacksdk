@@ -16,10 +16,10 @@ import mock
 import requests
 import six
 
-from keystoneclient.auth import base
-from keystoneclient import exceptions
-from keystoneclient import session as client_session
-from keystoneclient.tests import utils
+from openstack.restapi.auth import base
+from openstack.restapi import exceptions
+from openstack.restapi import session as client_session
+from openstack.tests import utils
 
 
 class SessionTests(utils.TestCase):

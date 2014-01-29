@@ -25,7 +25,7 @@ import six
 from six.moves.urllib import parse as urlparse
 import testtools
 
-from keystoneclient.openstack.common import jsonutils
+from openstack.openstack.common import jsonutils
 
 
 class TestCase(testtools.TestCase):

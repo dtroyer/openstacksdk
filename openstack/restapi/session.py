@@ -15,8 +15,8 @@ import logging
 import requests
 import six
 
-from keystoneclient import exceptions
-from keystoneclient.openstack.common import jsonutils
+from openstack.openstack.common import jsonutils
+from openstack.restapi import exceptions
 
 
 USER_AGENT = 'python-keystoneclient'

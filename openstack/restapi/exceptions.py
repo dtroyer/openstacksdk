@@ -19,7 +19,7 @@ Exception definitions.
 """
 
 #flake8: noqa
-from keystoneclient.apiclient.exceptions import *
+from openstack.restapi.apiclient_exceptions import *
 
 
 class CertificateConfigError(Exception):
