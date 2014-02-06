@@ -114,11 +114,11 @@ class ClientTest(utils.TestCase):
         cl.post("/hi", body=[1, 2, 3])
 
         self.assertEqual(httpretty.last_request().method, 'POST')
-<<<<<<< HEAD
-        self.assertEqual(httpretty.last_request().body, '[1, 2, 3]')
-=======
         self.assertEqual(httpretty.last_request().body, b'[1, 2, 3]')
->>>>>>> 0e8dfa1... new client
+        body = httpretty.last_request().body
+        if six.PY3:
+            body = body.decode('utf-8')
+        self.assertEqual(body, '[1, 2, 3]')
 
         self.assertRequestHeaderEqual('X-Auth-Token', 'token')
         self.assertRequestHeaderEqual('Content-Type', 'application/json')
