@@ -15,10 +15,13 @@ import os
 import sys
 import testtools
 
+from openstack.tests import utils
+
+
 _TRUE_VALUES = ('true', '1', 'yes')
 
 
-class TestCase(testtools.TestCase):
+class TestCase(utils.TestCase):
 
     """Test case base class for all unit tests."""
 
