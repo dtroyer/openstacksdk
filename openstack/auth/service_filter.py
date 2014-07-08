@@ -10,7 +10,7 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-from openstack import exceptions
+from openstack.sdk import exceptions
 
 
 class ServiceFilter(object):

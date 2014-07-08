@@ -225,6 +225,11 @@ def configure_logging(opts):
     console.setFormatter(formatter)
     root_logger.addHandler(console)
 
+    # Other modules we don't want DEBUG output for so
+    # don't reset them below
+    iso8601_log = logging.getLogger("iso8601")
+    iso8601_log.setLevel(logging.ERROR)
+
     if opts.debug:
         root_logger.setLevel(logging.DEBUG)
     else:

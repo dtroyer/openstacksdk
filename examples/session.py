@@ -26,7 +26,7 @@ from examples import authenticate
 from examples import common
 from examples import transport
 from openstack.auth import service_filter
-from openstack import session
+from openstack.sdk import session
 
 
 def make_session(opts):

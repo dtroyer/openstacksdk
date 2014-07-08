@@ -18,7 +18,7 @@ import six
 
 from openstack.auth import access
 from openstack.auth.identity import base
-from openstack import exceptions
+from openstack.sdk import exceptions
 
 
 @six.add_metaclass(abc.ABCMeta)

@@ -20,7 +20,7 @@ import copy
 
 import six
 
-from openstack import exceptions
+from openstack.sdk import exceptions
 
 
 class ServiceCatalog(object):

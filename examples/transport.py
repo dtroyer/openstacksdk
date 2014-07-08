@@ -24,7 +24,7 @@ For example:
 import sys
 
 from examples import common
-from openstack import transport
+from openstack.sdk import transport
 
 USER_AGENT = 'SDKExample'
 

@@ -28,7 +28,7 @@ import six
 from six.moves import urllib
 
 import openstack
-from openstack import exceptions
+from openstack.sdk import exceptions
 
 
 DEFAULT_USER_AGENT = 'python-OpenStackSDK/' + openstack.__version__
@@ -158,7 +158,8 @@ class Transport(requests.Session):
             except ValueError as e:
                 # this may be simplejson.decode.JSONDecodeError
                 # Re-raise into our own exception
-                raise exceptions.InvalidResponse(response=resp.text)
+#                 raise exceptions.InvalidResponse(response=resp.text)
+                resp.body = resp.text
 
         return resp
 

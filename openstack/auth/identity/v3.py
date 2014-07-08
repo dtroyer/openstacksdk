@@ -19,7 +19,7 @@ import six
 
 from openstack.auth import access
 from openstack.auth.identity import base
-from openstack import exceptions
+from openstack.sdk import exceptions
 
 _logger = logging.getLogger(__name__)
 

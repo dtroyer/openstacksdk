@@ -12,7 +12,7 @@
 
 import logging
 
-from openstack import utils
+from openstack.sdk import utils
 
 
 _logger = logging.getLogger(__name__)
